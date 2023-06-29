@@ -1,12 +1,8 @@
+#Question:   Good morning5:00 AM to 12:00 PM. Good noon 12:00 PM to 2:30 PM. Good afternoon 2:30 PM to 5:00 PM. Good evening 5:00 PM to 8:00 PM. Good night 8 to whole night till to 5:00 AM.
 import time
 print(time.strftime("Time :%H:%M:%S"))
 hour=int(time.strftime("%H"))
 minutes=int(time.strftime("%M"))
-'''Good morning5:00 AM to 12:00 PM. 
-Good noon 12:00 PM to 2:30 PM.
-Good afternoon 2:30 PM to 5:00 PM. 
-Good evening 5:00 PM to 8:00 PM. 
-Good night 8 to whole night till to 5:00 AM.'''
 if hour>=5 and hour<12:
     print("Good morning")
 elif hour>=12 and hour<14:
