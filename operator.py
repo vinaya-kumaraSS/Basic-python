@@ -1,7 +1,7 @@
 num1=int(input(print("enter the num1:")))
 num2=int(input(print("enter the num2:")))
 add=num1+num2
-sub=num1-num1
+sub=num1-num2
 mul=num1*num2
 div=num1/num2
 rem=num1%num2
