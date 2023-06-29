@@ -17,8 +17,8 @@ print(z.count("i"))#find the number of i the string
 y="vinay23!"
 print(y.endswith("!!"))#check the end with !! or not(return:true/false)
 print(z.find("iam"))#find if the element is present or not, if present it gives index, not found return -1
-# print(z.index("aa"))#same as find() but it gives the error if the element is not found
-print(y.isalnum())#it return true if the all the elements in the string are A-Z, a-z,0-9
+print(z.index("aa"))#same as find() but it gives the error if the element is not found
+print(y.isalnum())#it return true if the all the elements in the are A-Z, a-z,0-9
 print(y.isalpha())#it return true if the all the elements in the string are A-Z, a-z
 print(y.islower())#return true when all the character are lowercase
 n="vinay\n"
