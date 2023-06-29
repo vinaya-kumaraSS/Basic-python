@@ -1,0 +1,13 @@
+x=int(input("enter the first number: "))
+y=int(input("enter the second number "))
+print("1.addition")
+print("2.substraction")
+print("3.multiplication")
+print("4.division")
+choice=int(input("enter your choice: "))
+match choice:
+    case 1:print("addition: ",x+y)
+    case 2:print("substraction: ",x-y)
+    case 3:print("multiplication: ",x*y)
+    case 4:print("division: ",x/y)
+    case _ :print("enter the valid choice!!!!")
