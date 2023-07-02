@@ -1,61 +1,38 @@
-questions = [
-    "What is the capital of India?",
-    "What is the currency of Japan?",
-    "Who is the current President of the United States?",
-    "What is the highest mountain in the world?",
-    "Which of the following is a prime number? a) 4 b) 9 c) 11 d) 15"
-]
+print("welcome to Tech Quiz")
+name=input("enter your name:")
 
-answers = [
-    "New Delhi",
-    "Yen",
-    "Joe Biden",
-    "Mount Everest",
-    "c"
-]
+#list to store the question
+question=["solve 2*4*3 a)24 b)35 c)86 d)42",
+          "which of the following is odd number a)2 b)88 c)51 d)122",
+          "solve 2*8+3/4 a)61.00 b)16.00 c)16.75 d)61,75"
+          ]
 
-prizes = [
-    1000,
-    2000,
-    5000,
-    10000,
-    20000
-]
+#list to store the answer
+answer=["a",
+        "c",
+        "c"
+        ]
+#print the question and take the answer
+def print_question():
+    prize=0 
+    for i in range(len(question)):
+        print(i+1,":",question[i])
+        ans=input("enter the answer:")
+        gift=check_answer(ans,i)
+        if gift==1:
+            prize=prize+1000
+            print("Congratulations!",name,"You earned $", prize)        
 
-# function to check if the answer is correct
-def check_answer(question_number, answer):
-    if answer.lower() == answers[question_number].lower():
-        return True
+#check the answer correct or not
+def check_answer(ans,i):
+    if answer[i]==ans:
+        print("correct answer!")
+        return 1
     else:
+        print("incorrect answer!")
         return False
+    
+    
+#main function
+print_question()
 
-# function to play the game
-def play_game():
-    total_prize = 0
-    for i in range(len(questions)):
-        print(f"Question {i+1}: {questions[i]}")
-        answer = input("Enter your answer: ")
-        if check_answer(i, answer):
-            total_prize += prizes[i]
-            print(f"Correct! You won ${prizes[i]}")
-        else:
-            print("Incorrect. Better luck next time.")
-            break
-    return total_prize
-
-# function to ask the player if they want to play again
-def play_again():
-    play_more = input("Do you want to play again? (y/n) ")
-    if play_more.lower() == "y":
-        return True
-    else:
-        return False
-
-# main game loop
-while True:
-    total_prize = play_game()
-    print(f"You won a total of ${total_prize}")
-    if not play_again():
-        break
-
-print("Thank you for playing!")
